@@ -55,7 +55,7 @@ public class UserInterface {
                    Please select your choice (by number): 
                    """);
             // Get user input
-            String input = scanner.nextLine();
+            String input = scanner.nextLine().trim();
 
             // Dispatch to appropriate method
             switch(input){
@@ -66,6 +66,8 @@ public class UserInterface {
                 case "5" -> processByMileageRequest();
                 case "6" -> processByVehicleTypeRequest();
                 case "7" -> processAllVehiclesRequest();
+                case "8" -> processAddVehicleRequest();
+                case "9" -> processRemoveVehicleRequest();
                 case "99"-> {return;}
                 default -> badInput();
 

@@ -99,7 +99,7 @@ public class DealershipFileManager {
      *  will be saved in the inventory data file
      */
     String toFileString(Vehicle v){
-        return String.format("%d|%d|%s|%s|%s|%s|%s|%d|%f",
+        return String.format("%d|%d|%s|%s|%s|%s|%d|%.2f",
                 v.getVin(),
                 v.getYear(),
                 v.getMake(),

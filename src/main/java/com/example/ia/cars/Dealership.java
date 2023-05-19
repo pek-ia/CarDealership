@@ -90,7 +90,7 @@ public class Dealership {
     public List<Vehicle> getVehiclesByYear(int min, int max) {
         List<Vehicle> values = new ArrayList<>();
         for (Vehicle v : inventory) {
-            if (v.getPrice() >= min && v.getPrice() <= max)
+            if (v.getYear() >= min && v.getYear() <= max)
                 values.add(v);
         }
         return values;
@@ -99,7 +99,8 @@ public class Dealership {
     public List<Vehicle> getVehiclesByMakeModel(String make, String model) {
         List<Vehicle> values = new ArrayList<>();
         for (Vehicle v : inventory) {
-            if (v.getMake().contains(make) || v.getModel().contains(model))
+            if (v.getMake().toUpperCase().contains(make.toUpperCase())
+                    && v.getModel().toUpperCase().contains(model.toUpperCase()))
                 values.add(v);
         }
         return values;
@@ -117,7 +118,7 @@ public class Dealership {
     public List<Vehicle> getVehiclesByColor(String color) {
         List<Vehicle> values = new ArrayList<>();
         for (Vehicle v : inventory) {
-            if (v.getColor().contains(color))
+            if (v.getColor().toUpperCase().contains(color.toUpperCase()))
                 values.add(v);
         }
         return values;
@@ -135,7 +136,7 @@ public class Dealership {
     public List<Vehicle> getVehiclesByType(String vehicleType) {
         List<Vehicle> values = new ArrayList<>();
         for (Vehicle v : inventory) {
-            if (v.getVehicleType().contains(vehicleType))
+            if (v.getVehicleType().toUpperCase().contains(vehicleType.toUpperCase()))
                 values.add(v);
         }
         return values;
