@@ -42,7 +42,7 @@ public class UserInterface {
                 
                     1   Search by Price
                     2   Search by Make/Model
-                    3   Search by Year 
+                    3   Search by Year
                     4   Search by Color
                     5   Search by Mileage
                     6   Search by Type
@@ -68,12 +68,11 @@ public class UserInterface {
                 case "7" -> processAllVehiclesRequest();
                 case "8" -> processAddVehicleRequest();
                 case "9" -> processRemoveVehicleRequest();
-                case "99"-> {return;}
+                case "99"-> {done=true;}
                 default -> badInput();
 
             }
         }
-        return;
     }
 
     /*
@@ -263,9 +262,7 @@ public class UserInterface {
         int value = defaultValue;
         try {
             value = Integer.parseInt(input);
-        } catch (NumberFormatException ignored){
-            value = defaultValue;
-        }
+        } catch (NumberFormatException ignored){}
         return value;
     }
 
@@ -276,9 +273,7 @@ public class UserInterface {
         double value = defaultValue;
         try {
             value = Double.parseDouble(input);
-        } catch (NumberFormatException ignored){
-            value = defaultValue;
-        }
+        } catch (NumberFormatException ignored){ }
 
         return value;
     }

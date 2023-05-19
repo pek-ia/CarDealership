@@ -4,14 +4,14 @@ import java.io.*;
 
 /**
  * DealershipFileManager
- *
+ * <p/>
  * This class reads and writes the dealership inventory file
  *
  */
 
 public class DealershipFileManager {
 
-    private String inventoryFilename;
+    private final String inventoryFilename;
 
     public DealershipFileManager(String filename) {
         this.inventoryFilename = filename;
@@ -45,8 +45,6 @@ public class DealershipFileManager {
 
             br.close();
 
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
