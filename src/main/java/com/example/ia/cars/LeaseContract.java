@@ -14,4 +14,9 @@ public class LeaseContract extends Contract {
     public double getMonthlyPayment() {
         return 0;
     }
+
+    @Override
+    public String getPersistenceString() {
+        return null;
+    }
 }

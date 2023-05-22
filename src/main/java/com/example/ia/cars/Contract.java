@@ -2,10 +2,10 @@ package com.example.ia.cars;
 
 public abstract class Contract {
 
-    String date;
-    String customer_name;
-    String customer_email;
-    Vehicle vehicle;
+    private String date;
+    private String customer_name;
+    private String customer_email;
+    private Vehicle vehicle;
 
     public Contract(String date, String customer_name, String customer_email, Vehicle vehicle) {
         this.date = date;
@@ -17,6 +17,8 @@ public abstract class Contract {
     public abstract double getTotalPrice();
 
     public abstract double getMonthlyPayment();
+
+    public abstract String getPersistenceString();
 
     public String getDate() {
         return date;
